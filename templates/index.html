@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <div style="border:1px solid green; background-color: green;
+    color: white; font-size: 30px; font-family:Aries; padding: 30px;
+    text-align: center;">Welcome Music World!</div>
+</head>
+<body>
+<div style="margin:auto; width: 30%; margin-top: 200px;">
+    <form action="http://127.0.0.1:5000/query" method="post">
+        请输入歌词:<input type="text" name="query">
+        <input type="submit" value="submit">
+    </form>
+    <div style="margin-top: 10px;"><audio src="{{ url_for('static', filename=filename) }}" loop="loop" controls="controls" style="height: 30px;">播放歌曲</audio></div>
+</div>
+</body>
+</html>
